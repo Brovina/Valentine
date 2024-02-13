@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Валентинка</title>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h1 class="question">Будешь моей валентинкой?</h1>
+      <div class="buttons">
+        <button class="button yes">Да!</button>
+        <button class="button no">Нет</button>
+      </div>
+      <div class="thanks">
+        <div class="thanks-content">
+          <h2 class="thanks-message">Спасибо, что согласилась быть моей валентинкой!</h2>
+          <button class="close-button">Люблю тебя</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const yesButton = document.querySelector('.yes');
+    const thanks = document.querySelector('.thanks');
+    const closeButton = document.querySelector('.close-button');
+
+    yesButton.addEventListener('click', () => {
+      document.querySelector('.question').style.display = 'none';
+      document.querySelector('.buttons').style.display = 'none';
+
+      thanks.style.display = 'block';
+    });
+
+    closeButton.addEventListener('click', () => {
+      document.querySelector('.question').style.display = 'block';
+      document.querySelector('.buttons').style.display = 'flex';
+
+      thanks.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
